@@ -1,0 +1,67 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar Sessão</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+          
+                <div class="menuflutuante">
+                  <a href="home" class="home">CAF SCHOOL BOT</a>
+                    <div class="menu-direito">
+                      <a href="Contato">Contato</a>
+                      <a href="about.html">sobre</a>
+                    </div>
+              </div>
+                <div>
+                <br>
+                <br>
+                <br>
+              </div>
+                <img src="{{ url_for('static', filename = 'logo.jpeg') }}" alt="logo" class="logo">
+              </nav>
+      <br>
+        </header>
+        
+        <div class="container">
+        <form method="POST">
+            <h1>Login</h1>
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.email.label }} {{ form.email(size=32) }}
+                {% for error in form.email.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.senha.label }} {{ form.senha(size=32) }}
+                {% for error in form.senha.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+    <footer class="footer-fixo">
+        <p>Copyright todos os direitos reservados! 2024</p>
+        <a href="termos">Termos e Politicas</a>
+      </footer>    
+    </body>
+    </html>

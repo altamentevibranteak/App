@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.inicial {
+    display: flex;
+    justify-content: baseline;
+}
+
+body {
+    background-color: #8ebdb6;
+   
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+nav {
+    
+    box-shadow: #1b1d1d;
+}
+.menuflutuante {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f1f7cd;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.menu-direito {
+    display: flex;
+    gap: 20px;
+}
+
+.menuflutuante a {
+    text-decoration: none;
+    color: #3db395;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.welcome {
+    position: fixed;
+    top: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8ebdb6bc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    animation: fade 5s ease-in-out;
+    font-weight: bold;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
+h1 {
+    color: #ffffff;
+}
+
+h2 {
+    color: orange;
+}
+
+.info {
+    
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+
+.menu {
+    max-width: 80px;
+    transform: translate(330px, 40px);
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.menu a{
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: lightgray;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    width: fit-content;
+    
+    
+}
+
+.menu a:hover {
+    background-color: #34776e;
+    color: white;
+}
+
+
+.footer-fixo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3e838c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+.footer-fixo a {
+    color: white;
+    text-decoration: none;
+}
+
+.sb {
+    
+    background-color: #3db395;
+    border-radius: 15px;
+    
+    
+    
+    align-items: center;
+    justify-items: center;
+    width: 70%;
+    height: 30%;
+    padding: 5px 10px;
+    transform: translate(200px, 30px);
+}
+.sb p {
+    color: #ffffff
+}

@@ -1,0 +1,99 @@
+Debora 90045 deboragmail.com
+Maria 43257 mariagmail.com
+Rita 63913 ritagmail.com
+jovem
+12345678
+ana samuel 112233
+
+pip install mysql-connector-python Flask Flask-Login
+pip install Flask-WTF WTForms
+
+
+method='pbkdf2:sha256'
+
+
+{{ form.confirm_senha.label }} {{ form.confirm_senha(size=32) }}
+            {% for error in form.confirm_senha.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+
+
+
+            # Supondo que você receba dados do usuário como um formulário
+    id_usuario = request.form['id_usuario']
+    conteudo = request.form['conteudo']
+    resposta_chatbot = "Aqui vai a resposta do chatbot"
+    
+    sql = """
+    INSERT INTO mensagem_chatbot (id_usuario, conteudo, resposta_chatbot, data_envio, status_mensagem)
+    VALUES (%s, %s, %s, NOW(), 'não processada')
+    """
+    valores = (id_usuario, conteudo, resposta_chatbot)
+
+    cursor.execute(sql, valores)
+    conexao.commit()
+
+    cursor.close()
+    conexao.close()
+    
+    return "Mensagem enviada com sucesso!"
+
+if user_data and check_password_hash(user_data['senha'], senha):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# models.py
+from flask_login import UserMixin
+
+class Usuario_Comum(UserMixin):
+    def __init__(self, id_usuario, nome, email, telefone, genero, data_nascimento, tipo_usuario, data_criacao, status):
+        self.id_usuario = id_usuario
+        self.nome = nome
+        self.email = email
+        self.telefone = telefone
+        self.genero = genero
+        self.data_nascimento = data_nascimento
+        self.tipo_usuario = tipo_usuario
+        self.data_criacao = data_criacao
+        self.status = status
+
+    @property
+    def is_active(self):
+        return self.status == 'conta ativada'
+
+    @property
+    def is_authenticated(self):
+        return True
+
+    @property
+    def is_anonymous(self):
+        return False
+
+# app.py ou seu arquivo principal
+from flask_login import LoginManager
+
+background-color: #b4e7e1;
+
+@keyframes mover-rolagem {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>

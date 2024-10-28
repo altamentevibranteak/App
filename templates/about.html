@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename = 'style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+          
+          <div class="menuflutuante">
+            <a href="home.html" class="home">CAF SCHOOL BOT</a>
+              <div class="menu-direito">
+                <a href="Contato">Contato</a>
+                <a href="about">sobre</a>
+              </div>
+        </div>
+          <div>
+          <br>
+          <br>
+          <br>
+        </div>
+          <img src="{{ url_for('static', filename = 'logo.jpeg') }}" alt="logo" class="logo">
+        </nav>
+<br>
+    
+    </header>
+
+<div class="sb">
+    <h1>Info. APP</h1>
+    <br>    
+    <p>CAF School Bot é um APP de acompahamento escolar, ele usa um chatbot treinado com (IA) para responder perguntas sobre a instituição, dar informações sobre o desempenho dos alunos, automatizar o trabalho dos professores e demais funcionarios da administração, entre muitas outras coisas dentro da tematica escolar.</p>
+    <br>
+    <p> O app ainda está em fase de desenvolvimento, e em fase de teste.</p>
+</div>
+
+    <footer class="footer-fixo">
+        <p>Copyright todos os direitos reservados! 2024</p>
+        <a href="termos">Termos e Politicas</a>
+      </footer>
+</body>
+</html>

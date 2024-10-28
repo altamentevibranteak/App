@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP CAF School Bot</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename = 'style.css') }}">
+    
+</head>
+<body>
+    
+    <header>
+        <nav>
+          
+          <div class="menuflutuante">
+            <a href="home" class="home">CAF SCHOOL BOT</a>
+              <div class="menu-direito">
+                <a href="Contato">Contato</a>
+                <a href="about">sobre</a>
+              </div>
+        </div>
+          <div>
+          <br>
+          <br>
+          <br>
+        </div>
+          <img src="{{ url_for('static', filename = 'logo.jpeg') }}" alt="logo" class="logo">
+        </nav>
+<br>
+    <div class="welcome">
+       Olá, Seja Bem-vindo ao nosso App! 🌟
+    </div>
+    </header>
+    <br>
+    <div class="menu">
+
+        <a href="login">Login</a>
+        <a href="cadastro">Cadastrar</a>
+        <a href="visitante">Testar Como Visitante</a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  
+    <footer class="footer-fixo">
+      <p>Copyright todos os direitos reservados! 2024</p>
+      <a href="termos">Termos e Politicas</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename = 'cadastro.css') }}">
+    
+</head>
+<body>
+    <header>
+        <nav>
+          
+            <div class="menuflutuante">
+              <a href="home.html" class="home">CAF SCHOOL BOT</a>
+                <div class="menu-direito">
+                  <a href="Contato">Contato</a>
+                  <a href="about.html">sobre</a>
+                </div>
+          </div>
+            <div>
+            <br>
+            <br>
+            <br>
+          </div>
+            <img src="{{ url_for('static', filename = 'logo.jpeg') }}" alt="logo" class="logo">
+          </nav>
+  <br>
+    </header>
+    <div class="ct">
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+            <div>
+                {{ form.nome.label }}<br>
+                {{ form.nome(size=32) }}<br>
+                {% for error in form.nome.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.email.label }}<br>
+                {{ form.email(size=32) }}<br>
+                {% for error in form.email.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.telefone.label }}<br>
+                {{ form.telefone(size=32) }}<br>
+                {% for error in form.telefone.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.genero.label }}<br>
+                {{ form.genero() }}<br>
+                {% for error in form.genero.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.data_nascimento.label }}<br>
+                {{ form.data_nascimento() }}<br>
+                {% for error in form.data_nascimento.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.senha.label }}<br>
+                {{ form.senha(size=32) }}<br>
+                {% for error in form.senha.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.confirm_senha.label }}<br>
+                {{ form.confirm_senha(size=32) }}<br>
+                {% for error in form.confirm_senha.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.tipo_usuario.label }}<br>
+                {{ form.tipo_usuario() }}<br>
+                {% for error in form.tipo_usuario.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="footer-fixo">
+        <p>Copyright todos os direitos reservados! 2024</p>
+        <a href="termos">Termos e Politicas</a>
+      </footer>
+</body>
+</html>
