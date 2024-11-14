@@ -35,7 +35,7 @@ def adicionar_feedback(id_usuario, comentario, nota):
         
         
 # Exemplo de uso
-adicionar_feedback(1, "Ótimo aplicativo! Muito útil e intuitivo.", 9)    
+#adicionar_feedback(1, "Ótimo aplicativo! Muito útil e intuitivo.", 9)    
     
 
 #@routes_bp.route('/area_aluno')
@@ -71,4 +71,6 @@ def fedeback():
 @routes_bp.route('/visitante')
 def test():
     return render_template('visitante.html')
+
+
 

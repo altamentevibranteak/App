@@ -10,7 +10,7 @@
         }
 
         // Simulação do fim da interação do chatbot
-        setTimeout(abrirModal, 20000); // Exibe o modal após 20 segundos
+        setTimeout(abrirModal, 50000); // Exibe o modal após 50 segundos
 
         // Lógica de submissão do formulário de feedback
         document.getElementById("feedbackForm").onsubmit = async function (e) {
